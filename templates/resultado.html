@@ -1,0 +1,30 @@
+{% include 'cabecera.html' %}
+
+<div class="container">
+    <div class="row">
+        {% for prod in datos %} 
+        <div class="col-md-4">            
+            <div class="card">                                       
+                <div class="card-body">                            
+                    <h4 class="card-title">{{prod[0:32]}}</h4>
+                    <p class="card-text"><b>Existencia:</b> {{prod[32:37]}}</p>
+                    <p class="card-text"><b>Precio Público:</b> {{prod[37:47]}}</p>
+                    <p class="card-text"><b>Precio Farmacia:</b> {{prod[47:57]}}</p>
+                    <p class="card-text"><b>Utilidad:</b> {{prod[85:90]}} %</p>
+                    <p class="card-text"><b>Laboratorio:</b> {{prod[57:66]}}</p>
+                    <p class="card-text"><b>Código de Barras:</b> {{prod[66:79]}}</p>
+                    <p class="card-text"><b>Código de Proveedor:</b> {{prod[79:85]}}</p>
+                </div>                
+            </div>
+            <br>            
+        </div>
+        {% endfor %}
+        <!--<div class="col-md-4">
+            Second Column
+        </div>
+        <div class="col-md-4">
+            Third Column
+        </div>-->                
+    </div>
+</div>
+{% include 'pie.html' %}

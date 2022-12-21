@@ -1,0 +1,33 @@
+{% include 'cabecera.html' %}
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8">
+                <form action="/resultado" method="POST">
+                    <div class="card">
+                        <div class="card-header">
+                            Consulta de Productos
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                              <label for="txtConsulta" class="form-label">Producto</label>
+                              <input type="text"
+                                class="form-control" name="txtConsulta" id="txtConsulta" aria-describedby="helpId" placeholder="Introduce el nombre del producto" required>
+                                <br>
+                                <input name="" id="" class="btn btn-primary" type="submit" value="Consultar">                            
+                            </div>
+                        </div>                        
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-4">                
+                <div class="card text-white bg-light">
+                  <img class="card-img-top" src="{{url_for('static',filename='img/logoFA.png')}}" alt="Farmacia Avenida">                  
+                </div>
+            </div>            
+        </div>       
+    </div>
+
+{% include 'pie.html' %}
